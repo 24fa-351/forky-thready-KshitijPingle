@@ -1,0 +1,53 @@
+Pattern 1 :
+Process 0 creating process 3
+Process 3 beginning
+Process 0 creating process 5
+Process 5 beginning
+Process 0 creating process 1
+Process 1 beginning
+Process 0 creating process 2
+Process 2 beginning
+Process 0 creating process 4
+Process 4 beginning
+Process 1 exiting
+Process 2 exiting
+Process 3 exiting
+Process 4 exiting
+Process 5 exiting
+
+Pattern 2 :
+Process 0 (34747) exiting
+Child 1 (34748) created by parent 0 (34747)
+Process 1 (34748) beginning
+Process 1 (34748) exiting
+Child 1 (34748) created by parent 0 (34747)
+Process 1 (34748) beginning
+Child 2 (34768) created by parent 1 (34748)
+Process 2 (34768) beginning
+Process 2 (34768) exiting
+Child 1 (34748) created by parent 0 (34747)
+Process 1 (34748) beginning
+Child 2 (34768) created by parent 1 (34748)
+Process 2 (34768) beginning
+Child 3 (34785) created by parent 2 (34768)
+Process 3 (34785) beginning
+Process 3 (34785) exiting
+Child 1 (34748) created by parent 0 (34747)
+Process 1 (34748) beginning
+Child 2 (34768) created by parent 1 (34748)
+Process 2 (34768) beginning
+Child 3 (34785) created by parent 2 (34768)
+Process 3 (34785) beginning
+Child 4 (34800) created by parent 3 (34785)
+Process 4 (34800) beginning
+Process 4 (34800) exiting
+Child 1 (34748) created by parent 0 (34747)
+Process 1 (34748) beginning
+Child 2 (34768) created by parent 1 (34748)
+Process 2 (34768) beginning
+Child 3 (34785) created by parent 2 (34768)
+Process 3 (34785) beginning
+Child 4 (34800) created by parent 3 (34785)
+Process 4 (34800) beginning
+Child 5 (34820) created by parent 4 (34800)
+Process 5 (34820) beginning
