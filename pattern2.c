@@ -22,15 +22,19 @@ void Linear_Pattern (unsigned int n) {
 
         if (p == 0) {
             // This is the child process
-            printf("Child %d (%d) created by parent %d (%d)\n", count + 1, getpid(), count, getppid());
+            fprintf(stderr, "Child %d (%d) created by parent %d (%d)\n", count + 1, getpid(), count, getppid());
             count++;
-            printf("Process %d (%d) beginning\n", count, getpid());
+            fprintf(stderr, "Process %d (%d) beginning\n", count, getpid());
             sleep(2);
         }
         else {
-            printf("Process %d (%d) exiting\n", count, getpid());
+            fprintf(stderr, "Process %d (%d) exiting\n", count, getpid());
             //exit(0);
             break;
+        }
+
+        if (i == n - 1) {
+            fprintf(stderr, "Process %d (%d) exiting\n", count, getpid());
         }
     }
 

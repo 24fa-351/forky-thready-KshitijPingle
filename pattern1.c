@@ -16,8 +16,8 @@ void Normal_Pattern (unsigned int n) {
     for(int i = 0; i < n; i++) {
 
         if(fork() == 0) {
-            printf("Process 0 creating process %d\n",i+1);
-            printf("Process %d beginning\n", i + 1);
+            fprintf(stderr, "Process 0 creating process %d\n",i+1);
+            fprintf(stderr, "Process %d beginning\n", i + 1);
             sleep(2);
             exit(0);
         }
@@ -25,7 +25,7 @@ void Normal_Pattern (unsigned int n) {
     
     for(int i = 0; i < n; i++) {
         wait(NULL);
-        printf("Process %d exiting\n", i + 1);
+        fprintf(stderr, "Process %d exiting\n", i + 1);
     }
 
 }
