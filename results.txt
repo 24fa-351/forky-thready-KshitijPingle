@@ -1,0 +1,20 @@
+Process 0 (24386) beginning
+Child 1 (24387) created by parent 24386
+Process (24386) exiting
+Child 2 (24388) created by parent 24386
+Child (24409) created by parent 24387
+Child (24410) created by parent 24387
+Child (24411) created by parent 24387
+Child (24412) created by parent 24387
+Child (24413) created by parent 24388
+Child (24414) created by parent 24388
+Child (24415) created by parent 24388
+Child (24416) created by parent 24388
+Process (24409) exiting
+Process (24410) exiting
+Process (24411) exiting
+Process (24412) exiting
+Process (24413) exiting
+Process (24414) exiting
+Process (24415) exiting
+Process (24416) exiting
