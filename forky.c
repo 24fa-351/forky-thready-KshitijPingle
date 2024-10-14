@@ -17,8 +17,19 @@ int main(unsigned int argc, char *argv[]) {
     // Function pointer
     typedef void (*Pattern)(unsigned int n);
 
-    unsigned int pattern_num = atoi(argv[1]);
+    if (argc < 3) {
+        fprintf(stderr, "Incorrect amount of arguments\nUsage: %s <pattern_num> <n>\n", argv[0]);
+        return 1;
+    }
+
+    int pattern_num = atoi(argv[1]);
     unsigned int n = atoi(argv[2]);
+
+    if ((pattern_num > 3) || (pattern_num < 1)) {
+        fprintf(stderr, "Invalid pattern number, please input pattern number from 1 to 3\n");
+        fprintf(stderr, "Usage: %s <pattern_num> <n>\n", argv[0]);
+        return 1;
+    }
 
     // Initalize function pointer
     Pattern pattern;
