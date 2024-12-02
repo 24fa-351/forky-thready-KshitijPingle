@@ -1,20 +1,64 @@
-Process 0 (24386) beginning
-Child 1 (24387) created by parent 24386
-Process (24386) exiting
-Child 2 (24388) created by parent 24386
-Child (24409) created by parent 24387
-Child (24410) created by parent 24387
-Child (24411) created by parent 24387
-Child (24412) created by parent 24387
-Child (24413) created by parent 24388
-Child (24414) created by parent 24388
-Child (24415) created by parent 24388
-Child (24416) created by parent 24388
-Process (24409) exiting
-Process (24410) exiting
-Process (24411) exiting
-Process (24412) exiting
-Process (24413) exiting
-Process (24414) exiting
-Process (24415) exiting
-Process (24416) exiting
+Pattern 1 with n = 5:
+Process 0 creating process 1
+Process 1 beginning
+Process 0 creating process 2
+Process 0 creating process 3
+Process 3 beginning
+Process 0 creating process 4
+Process 4 beginning
+Process 0 creating process 5
+Process 5 beginning
+Process 2 beginning
+Process 1 exiting
+Process 2 exiting
+Process 3 exiting
+Process 4 exiting
+Process 5 exiting
+
+Pattern 2 with n = 6:
+Process 0 (18727) beginning
+Child 1 (18728) created by parent (18727)
+Process 2 (18728) beginning
+Child 2 (18729) created by parent (18728)
+Process 3 (18729) beginning
+Child 3 (18730) created by parent (18729)
+Process 4 (18730) beginning
+Child 4 (18731) created by parent (18730)
+Process 5 (18731) beginning
+Child 5 (18732) created by parent (18731)
+Process 6 (18732) beginning
+Process 6 (18732) exiting
+Process 5 (18732) exiting
+Process 4 (18732) exiting
+Process 3 (18732) exiting
+Process 2 (18732) exiting
+Process 1 (18732) exiting
+Process 5 (18731) exiting
+Process 4 (18731) exiting
+Process 3 (18731) exiting
+Process 2 (18731) exiting
+Process 1 (18731) exiting
+Process 4 (18730) exiting
+Process 3 (18730) exiting
+Process 2 (18730) exiting
+Process 1 (18730) exiting
+Process 3 (18729) exiting
+Process 2 (18729) exiting
+Process 1 (18729) exiting
+Process 2 (18728) exiting
+Process 1 (18728) exiting
+Process 0 (18727) exiting
+
+Pattern 3 with n = 4:
+Process 0 (18735) beginning
+Process (18735) exiting
+Child 1 (18736) created by parent 18735
+Child 2 (18737) created by parent 18735
+Child (18752) created by parent 18736
+Child (18753) created by parent 18736
+Child (18754) created by parent 18737
+Child (18755) created by parent 18737
+Process (18752) exiting
+Process (18754) exiting
+Process (18753) exiting
+Process (18755) exiting

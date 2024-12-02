@@ -1,11 +1,15 @@
 forky: forky.c pattern1.c pattern2.c pattern3.c
-	gcc -o forky pattern1.c pattern2.c pattern3.c forky.c
+	gcc -o forky pattern1.c pattern2.c pattern3.c forky.c -lm
 
-results: forky
-	(echo "Pattern 1:"; ./forky 1 7; \
-	echo "Pattern 2:"; ./forky 2 6; \
-	echo "Pattern 3:"; ./forky 3 4) \
-		2> results.txt
+results:
+	echo "Pattern 1 with n = 5:" > results.txt
+	./forky 1 5 2>> results.txt
+
+	echo "\nPattern 2 with n = 6:" >> results.txt
+	./forky 2 6 2>> results.txt
+
+	echo "\nPattern 3 with n = 4:" >> results.txt
+	./forky 3 4 2>> results.txt
 
 clean:
 	rm -f forky

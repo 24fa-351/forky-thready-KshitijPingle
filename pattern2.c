@@ -10,6 +10,7 @@
 
 #include "pattern2.h"
 
+// Pattern 2 is printing exit too many times, check results.txt
 
 void pattern_2 (unsigned int max) {
     fprintf(stderr, "Process 0 (%d) beginning\n", getpid());
@@ -30,6 +31,7 @@ void pattern_2 (unsigned int max) {
     fprintf(stderr, "Process 0 (%d) exiting\n", getpid());
     return;
 }
+
 
 void make_child_process(unsigned int max, unsigned int current) {
     fprintf(stderr, "Process %d (%d) beginning\n", current, getpid());
