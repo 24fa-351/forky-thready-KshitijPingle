@@ -6,6 +6,8 @@
 #ifndef PATTERN2_H
 #define PATTERN2_H
 
-void Linear_Pattern (unsigned int n);
+void pattern_2 (unsigned int max);
+
+void make_child_process(unsigned int max, unsigned int current);
 
 #endif // PATTERN2_H

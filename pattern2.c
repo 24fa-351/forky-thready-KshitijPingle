@@ -11,33 +11,45 @@
 #include "pattern2.h"
 
 
-void Linear_Pattern (unsigned int n) {
+void pattern_2 (unsigned int max) {
+    fprintf(stderr, "Process 0 (%d) beginning\n", getpid());
 
-    // Does not work correctly at the moment
+    int p = fork();
+    if (p == 0) {
+        // Parent process only creates one child
+        fprintf(stderr, "Child 1 (%d) created by parent (%d)\n", getpid(), getppid());
+        make_child_process(max, 2);
 
-    int count = 0;
+        fprintf(stderr, "Process 1 (%d) exiting\n", getpid());
+        exit(0);
+    }
+    else{
+        wait(NULL);
+    }
 
-    for (int i = 0; i < n; ++i) {
+    fprintf(stderr, "Process 0 (%d) exiting\n", getpid());
+    return;
+}
+
+void make_child_process(unsigned int max, unsigned int current) {
+    fprintf(stderr, "Process %d (%d) beginning\n", current, getpid());
+
+    if (current < max) {
+        // Only make one child
         int p = fork();
-
+        
         if (p == 0) {
-            // This is the child process
-            fprintf(stderr, "Child %d (%d) created by parent %d (%d)\n", count + 1, getpid(), count, getppid());
-            count++;
-            fprintf(stderr, "Process %d (%d) beginning\n", count, getpid());
-            sleep(2);
-        }
-        else {
-            fprintf(stderr, "Process %d (%d) exiting\n", count, getpid());
-            //exit(0);
-            break;
-        }
+            fprintf(stderr, "Child %d (%d) created by parent (%d)\n", current, getpid(), getppid());
 
-        if (i == n - 1) {
-            fprintf(stderr, "Process %d (%d) exiting\n", count, getpid());
+            // Child process then also makes one child
+            make_child_process(max, current + 1);
+        }
+        else{
+            wait(NULL);
         }
     }
 
-    exit(0);
+    fprintf(stderr, "Process %d (%d) exiting\n", current, getpid());
 
+    return;
 }

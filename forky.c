@@ -18,7 +18,8 @@ int main(unsigned int argc, char *argv[]) {
     typedef void (*Pattern)(unsigned int n);
 
     if (argc < 3) {
-        fprintf(stderr, "Incorrect amount of arguments\nUsage: %s <pattern_num> <n>\n", argv[0]);
+        fprintf(stderr, "Incorrect amount of arguments\n");
+        fprintf(stderr, "Usage: %s <pattern_num> <n>\n", argv[0]);
         return 1;
     }
 
@@ -35,13 +36,12 @@ int main(unsigned int argc, char *argv[]) {
     Pattern pattern;
 
     switch (pattern_num) {
-
         case 1:
-            pattern = Normal_Pattern;
+            pattern = pattern_1;
             break;
     
         case 2:
-            pattern = Linear_Pattern;
+            pattern = pattern_2;
             break;
 
         case 3:
@@ -49,7 +49,7 @@ int main(unsigned int argc, char *argv[]) {
             break;
     
         default:
-            pattern = Normal_Pattern;
+            pattern = pattern_1;
             break;
     }
 

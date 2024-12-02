@@ -6,6 +6,6 @@
 #ifndef PATTERN1_H
 #define PATTERN1_H
 
-void Normal_Pattern (unsigned int n);
+void pattern_1 (unsigned int max);
 
 #endif // PATTERN1_H

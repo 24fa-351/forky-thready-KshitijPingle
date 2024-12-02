@@ -11,9 +11,9 @@
 #include "pattern1.h"
 
 
-void Normal_Pattern (unsigned int n) {
+void pattern_1 (unsigned int max) {
 
-    for(int i = 0; i < n; i++) {
+    for(int i = 0; i < max; i++) {
 
         if(fork() == 0) {
             fprintf(stderr, "Process 0 creating process %d\n",i+1);
@@ -23,7 +23,7 @@ void Normal_Pattern (unsigned int n) {
         }
     }
     
-    for(int i = 0; i < n; i++) {
+    for(int i = 0; i < max; i++) {
         wait(NULL);
         fprintf(stderr, "Process %d exiting\n", i + 1);
     }
