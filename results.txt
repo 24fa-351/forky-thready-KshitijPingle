@@ -1,64 +1,46 @@
-Pattern 1 with n = 5:
+Pattern 1 with n = 4:
 Process 0 creating process 1
 Process 1 beginning
 Process 0 creating process 2
+Process 2 beginning
 Process 0 creating process 3
 Process 3 beginning
 Process 0 creating process 4
 Process 4 beginning
-Process 0 creating process 5
-Process 5 beginning
-Process 2 beginning
 Process 1 exiting
 Process 2 exiting
 Process 3 exiting
 Process 4 exiting
-Process 5 exiting
 
-Pattern 2 with n = 6:
-Process 0 (18727) beginning
-Child 1 (18728) created by parent (18727)
-Process 2 (18728) beginning
-Child 2 (18729) created by parent (18728)
-Process 3 (18729) beginning
-Child 3 (18730) created by parent (18729)
-Process 4 (18730) beginning
-Child 4 (18731) created by parent (18730)
-Process 5 (18731) beginning
-Child 5 (18732) created by parent (18731)
-Process 6 (18732) beginning
-Process 6 (18732) exiting
-Process 5 (18732) exiting
-Process 4 (18732) exiting
-Process 3 (18732) exiting
-Process 2 (18732) exiting
-Process 1 (18732) exiting
-Process 5 (18731) exiting
-Process 4 (18731) exiting
-Process 3 (18731) exiting
-Process 2 (18731) exiting
-Process 1 (18731) exiting
-Process 4 (18730) exiting
-Process 3 (18730) exiting
-Process 2 (18730) exiting
-Process 1 (18730) exiting
-Process 3 (18729) exiting
-Process 2 (18729) exiting
-Process 1 (18729) exiting
-Process 2 (18728) exiting
-Process 1 (18728) exiting
-Process 0 (18727) exiting
+Pattern 2 with n = 5:
+Process 0 (10405) beginning
+Child 1 (10406) created by process 0 (10405)
+Process 1 (10406) beginning
+Child 2 (10417) created by process 1 (10406)
+Process 2 (10417) beginning
+Child 3 (10422) created by process 2 (10417)
+Process 3 (10422) beginning
+Child 4 (10433) created by process 3 (10422)
+Process 4 (10433) beginning
+Child 5 (10438) created by process 4 (10433)
+Process 5 (10438) beginning
+Process 5 (10438) exiting
+Process 4 (10433) exiting
+Process 3 (10422) exiting
+Process 2 (10417) exiting
+Process 1 (10406) exiting
+Process 0 (10405) exiting
 
 Pattern 3 with n = 4:
-Process 0 (18735) beginning
-Process (18735) exiting
-Child 1 (18736) created by parent 18735
-Child 2 (18737) created by parent 18735
-Child (18752) created by parent 18736
-Child (18753) created by parent 18736
-Child (18754) created by parent 18737
-Child (18755) created by parent 18737
-Process (18752) exiting
-Process (18754) exiting
-Process (18753) exiting
-Process (18755) exiting
+Process 0 (10450) beginning
+Child 1 (10452) created by parent 10450
+Process (10450) exiting
+Child 2 (10453) created by parent 10450
+Child (10467) created by parent 10452
+Child (10470) created by parent 10453
+Child (10468) created by parent 10452
+Child (10469) created by parent 10453
+Process (10467) exiting
+Process (10470) exiting
+Process (10468) exiting
+Process (10469) exiting

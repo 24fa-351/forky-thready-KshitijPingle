@@ -10,16 +10,21 @@
 
 #include "pattern2.h"
 
-// Pattern 2 is printing exit too many times, check results.txt
-
 void pattern_2 (unsigned int max) {
     fprintf(stderr, "Process 0 (%d) beginning\n", getpid());
 
     int p = fork();
     if (p == 0) {
-        // Parent process only creates one child
-        fprintf(stderr, "Child 1 (%d) created by parent (%d)\n", getpid(), getppid());
-        make_child_process(max, 2);
+        
+        fprintf(stderr, "Child 1 (%d) created by process 0 (%d)\n", getpid(), getppid());
+        fprintf(stderr, "Process 1 (%d) beginning\n", getpid());
+
+        sleep(1);  // Do some work
+
+        if (max > 1) {
+            // Pass in 2 as the current process number
+            make_child_process(max, 2);
+        }
 
         fprintf(stderr, "Process 1 (%d) exiting\n", getpid());
         exit(0);
@@ -34,24 +39,26 @@ void pattern_2 (unsigned int max) {
 
 
 void make_child_process(unsigned int max, unsigned int current) {
-    fprintf(stderr, "Process %d (%d) beginning\n", current, getpid());
+    
+    int p = fork();
 
-    if (current < max) {
-        // Only make one child
-        int p = fork();
-        
-        if (p == 0) {
-            fprintf(stderr, "Child %d (%d) created by parent (%d)\n", current, getpid(), getppid());
+    if (p == 0) {
 
-            // Child process then also makes one child
+        fprintf(stderr, "Child %d (%d) created by process %d (%d)\n", current, getpid(), current - 1, getppid());
+        fprintf(stderr, "Process %d (%d) beginning\n", current, getpid());
+
+        sleep(1);  // Do some work
+
+        if (current < max) {
             make_child_process(max, current + 1);
         }
-        else{
-            wait(NULL);
-        }
-    }
 
-    fprintf(stderr, "Process %d (%d) exiting\n", current, getpid());
+        fprintf(stderr, "Process %d (%d) exiting\n", current, getpid());
+        exit(0);
+    }
+    else {
+        wait(NULL);
+    }
 
     return;
 }

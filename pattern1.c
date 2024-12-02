@@ -18,7 +18,7 @@ void pattern_1 (unsigned int max) {
         if(fork() == 0) {
             fprintf(stderr, "Process 0 creating process %d\n",i+1);
             fprintf(stderr, "Process %d beginning\n", i + 1);
-            sleep(2);
+            sleep(1);   // Do some work
             exit(0);
         }
     }
