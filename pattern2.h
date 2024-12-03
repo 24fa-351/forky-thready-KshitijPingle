@@ -6,7 +6,7 @@
 #ifndef PATTERN2_H
 #define PATTERN2_H
 
-void pattern_2 (unsigned int max);
+void pattern_2(unsigned int max);
 
 void make_child_process(unsigned int max, unsigned int current);
 

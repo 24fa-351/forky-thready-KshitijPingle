@@ -11,8 +11,8 @@
 
 #include "pattern3.h"
 
-
-void Binary_Pattern (unsigned int n) {
+void Binary_Pattern(unsigned int n)
+{
 
     unsigned int nodes = 0;
     int p = 0;
@@ -21,14 +21,18 @@ void Binary_Pattern (unsigned int n) {
 
     fprintf(stderr, "Process 0 (%d) beginning\n", getpid());
 
-    for (int i = 0; i < levels; ++i) {
+    for (int i = 0; i < levels; ++i)
+    {
 
-        if (i == levels - 1) {
+        if (i == levels - 1)
+        {
             // Create Leaves child processes
-            for (unsigned int j = 0; j < num_of_leaves; j++) {
+            for (unsigned int j = 0; j < num_of_leaves; j++)
+            {
                 p = fork();
 
-                if (p == 0) {
+                if (p == 0)
+                {
                     // This is the child process
                     fprintf(stderr, "Child (%d) created by parent %d\n", getpid(), getppid());
                     sleep(2);
@@ -36,22 +40,25 @@ void Binary_Pattern (unsigned int n) {
                     exit(0);
                 }
             }
-
         }
-        else {
+        else
+        {
             // Create 2 child processes
-            for (unsigned int j = 0; j < 2; j++) {
+            for (unsigned int j = 0; j < 2; j++)
+            {
                 p = fork();
 
-                if (p == 0) {
+                if (p == 0)
+                {
                     // This is the child process
                     fprintf(stderr, "Child %d (%d) created by parent %d\n", j + 1, getpid(), getppid());
                     sleep(2);
 
-                    break;  // Don't want children to create more children in this level
+                    break; // Don't want children to create more children in this level
                 }
 
-                if (j == 1) {   // Want to exit after 2 children are created
+                if (j == 1)
+                { // Want to exit after 2 children are created
                     fprintf(stderr, "Process (%d) exiting\n", getpid());
                     exit(0);
                 }
@@ -59,8 +66,8 @@ void Binary_Pattern (unsigned int n) {
         }
     }
 
-    for (unsigned int i = 0; i < n; i++) {
+    for (unsigned int i = 0; i < n; i++)
+    {
         wait(NULL);
     }
-
 }

@@ -6,6 +6,6 @@
 #ifndef PATTERN3_H
 #define PATTERN3_H
 
-void Binary_Pattern (unsigned int n);
+void Binary_Pattern(unsigned int n);
 
 #endif // PATTERN3_H
