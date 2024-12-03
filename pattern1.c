@@ -10,22 +10,26 @@
 
 #include "pattern1.h"
 
-
+// All child processes are made by the parent process
 void pattern_1 (unsigned int max) {
 
-    for(int i = 0; i < max; i++) {
+    fprintf(stderr, "Process 0 (%d) beginning\n", getpid());
+
+    for(int i = 1; i < max + 1; i++) {
 
         if(fork() == 0) {
-            fprintf(stderr, "Process 0 creating process %d\n",i+1);
-            fprintf(stderr, "Process %d beginning\n", i + 1);
+            fprintf(stderr, "Child %d (%d) created by process %d (%d)\n",i, getpid(), 0, getppid());
+            fprintf(stderr, "Process %d (%d) beginning\n", i, getpid());
             sleep(1);   // Do some work
+
+            fprintf(stderr, "Process %d (%d) exiting\n", i, getpid());
             exit(0);
+        }
+        else {
+            wait(NULL);
         }
     }
     
-    for(int i = 0; i < max; i++) {
-        wait(NULL);
-        fprintf(stderr, "Process %d exiting\n", i + 1);
-    }
+    fprintf(stderr, "Process 0 (%d) exiting\n", getpid());
 
 }

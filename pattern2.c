@@ -10,6 +10,7 @@
 
 #include "pattern2.h"
 
+// Every child process makes the next child process
 void pattern_2 (unsigned int max) {
     fprintf(stderr, "Process 0 (%d) beginning\n", getpid());
 
