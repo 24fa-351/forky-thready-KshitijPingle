@@ -1,13 +1,6 @@
-# 351-five: Do the Forky-Thready thing in Assignment 5
+# 351 Forky Thready Assignment
+Program to create pattern with `fork()`   
 
-- Create processes
-
-- Wait for them
-
-- Output messages to a text file.
-
-   - Commit the text file here as "results.txt"
-
-- Professional!
-
-  
+## Completed
+Pattern 1 and 2 are working  
+Pattern 3 still work in progress

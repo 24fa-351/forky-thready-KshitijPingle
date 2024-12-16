@@ -1,0 +1,49 @@
+Pattern 1 with n = 4:
+Process 0 (3338) beginning
+Child 1 (3340) created by process 0 (3338)
+Process 1 (3340) beginning
+Process 1 (3340) exiting
+Child 2 (3350) created by process 0 (3338)
+Process 2 (3350) beginning
+Process 2 (3350) exiting
+Child 3 (3355) created by process 0 (3338)
+Process 3 (3355) beginning
+Process 3 (3355) exiting
+Child 4 (3366) created by process 0 (3338)
+Process 4 (3366) beginning
+Process 4 (3366) exiting
+Process 0 (3338) exiting
+
+Pattern 2 with n = 5:
+Process 0 (3373) beginning
+Child 1 (3374) created by process 0 (3373)
+Process 1 (3374) beginning
+Child 2 (3385) created by process 1 (3374)
+Process 2 (3385) beginning
+Child 3 (3390) created by process 2 (3385)
+Process 3 (3390) beginning
+Child 4 (3401) created by process 3 (3390)
+Process 4 (3401) beginning
+Child 5 (3406) created by process 4 (3401)
+Process 5 (3406) beginning
+Process 5 (3406) exiting
+Process 4 (3401) exiting
+Process 3 (3390) exiting
+Process 2 (3385) exiting
+Process 1 (3374) exiting
+Process 0 (3373) exiting
+
+Pattern 3 still !Work in Progress!
+Pattern 3 with n = 4:
+Process 0 (3420) beginning
+Child 1 (3421) created by parent 3420
+Process (3420) exiting
+Child 2 (3422) created by parent 3420
+Child (3439) created by parent 3421
+Child (3440) created by parent 3421
+Child (3441) created by parent 3422
+Child (3442) created by parent 3422
+Process (3439) exiting
+Process (3440) exiting
+Process (3441) exiting
+Process (3442) exiting
